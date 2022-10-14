@@ -4,53 +4,90 @@
 <head>
 	<meta charset="utf-8">
 	<title>
-		How to get values from html input
-		array using JavaScript ?
+		Second Advice
 	</title>
 </head>
 
 <body style="text-align: center;">
-	
-	<h1 style="color: green;">
-		Second Advice
-	</h1>
-
 	<h2>
 		{% if result %}
 		{{result}}
 		{% endif %}
 
 	</h2>
+	<div <section>
 
-	<h3 id="po">Enter your symptons</h3>
-	<form class="" action="/api/abc/" method="post">
-        {%csrf_token%}
-		<input type="text" name="array[]" value="" /><br>
-		<input type="text" name="array[]" value="" /><br>
-		<input type="text" name="array[]" value="" /><br>
-		<h3 id="po">Enter your symptons</h3>
-        <input type="text" name="doctorAdvice" value=""/><br>
-		<button type="submit" name="button">
-			Get Advice
-		</button>
-	</form>
-	<br>
-    
-	<p id="par"></p>
+		<div class="grid ">
+			<div class="bg-purple-900 h-72 flex items-center justify-center">
+				<div class="flex flex-col max-w-4xl items-center justify-center">
+					<div class=" text-white text-4xl font-bold">Second Advice</div>
+					<div class="m-2 text-white ">Get assured with us</div>
+				</div>
+			</div>
+			
 
-	<script type="text/javascript">
-		var k = "Entered symptons are ";
-		function Geeks() {
-			var input = document.getElementsByName('array[]');
-            const symptons = [];
-			for (var i = 0; i < input.length; i++) {
-				var a = input[i];
-                symptons[i]=a.value;
+			<div class="bg-white h-auto flex justify-center">
+				<div class="h-auto bg-white -mt-20 w-[80%] md:w-1/2 text-stone-700 font-medium shadow-lg">
+					<div class="m-4 font-bold" id="po">Enter your Symptoms </div>
+
+					<form class="" action="/api/abc/" method="post">
+						{%csrf_token%}
+						<input type="text" name="array[]" value="" placeholder="Symptom 1"
+						class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
+						
+
+						<input type="text" name="array[]" value="" placeholder="Symptom 2"
+						class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
+						
+
+						<input type="text" name="array[]" value="" placeholder="Symptom 3"
+						class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
+						
+
+
+
+						<div class="m-4 font-bold" id="po">Doctor's Prognosis </div>
+						
+						<input type="text" name="doctorAdvice" value="" placeholder="Diagnosis "
+							class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
+
+						<div>
+							<button type="submit" name="button"
+								class="bg-purple-900 p-2 m-4 text-white w-max font-normal hover:bg-purple-700 cursor-pointer">
+								Get Advice
+							</button>
+						</div>
+
+
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+		</form>
+		<br>
+		<p id="par"></p>
+		</section>
+
+		<p id="par"></p>
+
+		<script type="text/javascript">
+			var k = "Entered symptons are ";
+			function Geeks() {
+				var input = document.getElementsByName('array[]');
+				const symptons = [];
+				for (var i = 0; i < input.length; i++) {
+					var a = input[i];
+					symptons[i] = a.value;
+				}
+				console.log(symptons);
+				console.log(document.getElementsByName('doctorAdvice')[0].value);
 			}
-            console.log(symptons);
-            console.log(document.getElementsByName('doctorAdvice')[0].value);
-		}
-	</script>
+		</script>
 </body>
 
 </html>
