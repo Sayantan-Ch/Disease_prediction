@@ -1,93 +1,153 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>
-		Second Advice
-	</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=""https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel=""stylesheet">
+    <title>MediPool</title>
 </head>
+<body>
+    <header>
+    <div class="flex justify-center  bg-no-repeat  bg-cover h-full md:bg-center"
+    style="background-image:url('https://scontent.fblr20-2.fna.fbcdn.net/v/t1.15752-9/306906365_784310422801042_4128406534039147312_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=9gmT9eWeMNgAX_YIBRB&_nc_ht=scontent.fblr20-2.fna&oh=03_AdRD1UzQzIR2LiisH2hMpOWj3hpogXNSQSPtP-252TQC8A&oe=636ED887')">
+    <div class="flex flex-col items-center ">
+        <nav class="self-center w-full max-w-7xl ">
+            <div
+                class="flex md:flex-row flex-col justify-between items-center md:items-start border-b-2 border-blue-900">
+                <h1 class=" py-4 text-2xl font-sans font-bold px-10">MediPool</h1>
+                <ul class="flex  items-center text-sm md:text-[18px] font-bold  md:px-10 my-2">
+                    <li
+                        class="hover:underline  underline-offset-4 decoration-2 decoration-cyan-500 py-2 rounded-lg px-2 md:px-5">
+                        <a href="#">Home</a>
+                    </li>
+                    <li
+                        class="hover:underline underline-offset-4 decoration-2 dec">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li
+                        class="hover:underline underline-offset-4 decoration-2 decoration-cyan-500 py-2 rounded-lg px-2 md:px-5">
+                        <a href="#">Services</a>
+                    </li>
+                    <li
+                        class="hover:underline underline-offset-4 decoration-2 decoration-cyan-500 py-2 rounded-lg px-2 md:px-5">
+                        <a href="#">Login</a>
+                        <link href=""login.html" rel=""login">
+                    </li>
 
-<body style="text-align: center;">
-	
-	<div <section>
+                </ul>
 
-		<div class="grid ">
-			<div class="bg-purple-900 h-72 flex items-center justify-center">
-				<div class="flex flex-col max-w-4xl items-center justify-center">
-					<div class=" text-white text-4xl font-bold">Second Advice</div>
-					<div class="m-2 text-white ">Get assured with us</div>
-				</div>
-			</div>
-			
+            </div>
+        </nav>
+        <div class="flex flex-col justify-center items-center text-center  max-w-7xl   my-8 py-4 px-10">
+            <h1 class="text-base font-medium tracking-wider ">"Fixing the problem of today by using Technology of Tomorrow"</h1>
+            <span class="underline underline-offset-2 text-gray-700-mt-3"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; </span>
+            <div class="flex flex-col text-gray-700mt-5">
+                <h1 class=" text-blue-900 text-4xl md:text-[50px] font-semibold">Welcome!</h1>
+                <p class="text-blue-900 text-xl mt-2 md:mt-4 tracking-wide">Diagnose - Treatment - Cure</p>
+            </div>
+            <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7">Our platform, which is motivated by the fundamental  demand-supply rule of economics, serves to various  domains of healthcare while dealing with complicated  challenges. 
+                All of the features mentioned have been thoroughly  investigated and are supported by several articles and  real-world case studies.</p>
+            <div class="space-x-3 mt-6 md:mt-4 text-white">
+                <a href="https://www.facebook.com"> <i
+                        class="fa-brands fa-facebook-f bg-blue-600 hover:text-blue-500 hover:bg-white rounded-full px-3 py-[11px] w-9 h-9 text-center "></i>
+                </a>
+                <a href="https://twitter.com"> <i
+                        class="fa-brands fa-twitter bg-blue-600 hover:text-red-500 hover:bg-white rounded-full px-[10px] py-[11px] w-9 h-9 text-center"></i>
+                </a>
+                <a href="https://www.linkedin.com/feed/"> <i
+                        class="fa-brands fa-linkedin bg-blue-600 hover:text-yellow-500 hover:bg-white rounded-full px-3 py-[11px] w-9 h-9 text-center"></i>
+                </a>
+                <a href="https://github.com/Manipal-Hackathon-2022/Team-CODEV"> <i
+                        class="fa-brands fa-chrome bg-blue-600 hover:text-indigo-600 hover:bg-white rounded-full px-[10px] py-[11px] w-9 h-9 text-center"></i>
+                </a>
 
-			<div class="bg-white h-auto flex justify-center">
-				<div class="h-auto bg-white -mt-20 w-[80%] md:w-1/2 text-stone-700 font-medium shadow-lg">
-					<div class="m-4 font-bold" id="po">Enter your Symptoms </div>
+            </div>
+            <div class="flex mt-10 space-x-5">
+                <button type="button" class="bg-white text-blue-900 px-6 py-2 hover:brightness-105 font-semibold">Diagnostic Center</Center></button>
+                <button
+                    class="bg-blue-900 text-white border-2 border-white px-6 py-2 hover:brightness-105 font-semibold">Second Advice</button>
 
-					<form class="" action="/api/abc/" method="post">
-						{%csrf_token%}
-						<input type="text" name="array[]" value="" placeholder="Symptom 1"
-						class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
-						
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/290d4f0eb4.js" crossorigin="anonymous"></script>
+</header>   
 
-						<input type="text" name="array[]" value="" placeholder="Symptom 2"
-						class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
-						
+<section>
+    <div class="flex justify-center  p-4">
+        <div class="flex flex-col justify-center items-center ">
+            <div class="text-stone-600  font-medium">Our Services</div>
+            <div class="text-blue-900 text-3xl md:text-5xl font-medium">Why Medipool?</div>
+            <div class="text-stone-600 my-4 md:font-medium text-center w-3/4 md:w-1/2">Our platform, which is motivated by the fundamental  demand-supply rule of economics, serves to various  domains of healthcare while dealing with complicated  challenges. 
+                All of the features mentioned have been thoroughly  investigated and are supported by several articles and  real-world case studies.</div>
+            <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
 
-						<input type="text" name="array[]" value="" placeholder="Symptom 3"
-						class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
-						
+                <div class="overflow-hidden w-full m-4 flex justify-center rounded-lg  md:w-[33%] px-8">
 
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center">
+                                <img src="https://betterhealthwhileaging.net/wp-content/uploads/2015/07/bigstock-Doctor-Discussing-Records-With-41853415.jpg" alt="" class="rounded-full cursor cursor-pointer" />
+                                <div class="text-stone-500  m-2">  We will take your symptoms as input and give the likelihood of diseases that may concern. Ou aim to connect patients with pin pointed doctors using our ML Model.</div>
+                                <div class="font-bold text-blue-900">Second Advice Feature</div>
+                                <div class="text-sm font-medium text-stone-500 hover:text-blue-900"><a href="#">Board
+                                        Want a Second Advice?</a></div>
+                            </div>
+                        </div>
 
-
-						<div class="m-4 font-bold" id="po">Doctor's Prognosis </div>
-						
-						<input type="text" name="doctorAdvice" value="" placeholder="Diagnosis "
-							class="border-2 ml-4 border-purple-400 h-10 w-3/4 text-gray-400 rounded">
-
-						<div>
-							<button type="submit" name="button"
-								class="bg-purple-900 p-2 m-4 text-white w-max font-normal hover:bg-purple-700 cursor-pointer">
-								Get Advice
-							</button>
-						</div>
-
-
-				</div>
-			</div>
-		</div>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    </div>
+                </div>
 
 
-		</form>
-		<br>
-		<p id="par"></p>
-		</section>
-		<h2>
-			{% if result %}
-			{{result}}
-			{% endif %}
-	
-		</h2>
-		<p id="par"></p>
-	</div>
-		<script type="text/javascript">
-			var k = "Entered symptons are ";
-			function Geeks() {
-				var input = document.getElementsByName('array[]');
-				const symptons = [];
-				for (var i = 0; i < input.length; i++) {
-					var a = input[i];
-					symptons[i] = a.value;
-				}
-				console.log(symptons);
-				console.log(document.getElementsByName('doctorAdvice')[0].value);
-			}
-		</script>
+                <div class="overflow-hidden w-full m-4 flex justify-center rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center">
+                                <img src="https://images.unsplash.com/photo-1630128042309-60a8bfb987c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="" class="rounded-full cursor-pointer" />
+                                <div class="text-stone-500  m-2"> You can check for the nearest diagnostic center near you here and get checked up. Let us enable health care accessibility for all .</div>
+                                <div class="font-bold text-blue-900">Diagnostic Center</div>
+                                <div class="text-sm font-medium text-stone-500 hover:text-blue-900"><a href="#">Centralizd Diagnostic centers
+                                        </a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+</section>
+<html>
+<head>
+<style>
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: blue;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<footer>
+  <p>Contact us: 9818810266<br>
+  <a href="mailto:MediPool@gmail.com">Medipool@gmail.com</a></p>
+</footer>
+
 </body>
+</html>
 
+</body>
 </html>

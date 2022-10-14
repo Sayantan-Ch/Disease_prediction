@@ -48,8 +48,8 @@ class Disease_Predict(APIView):
         return Response(predictions, status=200)
 
 
-def home_page(request):
-    return render(request,"home.html")
+def secondAdvice_page(request):
+    return render(request,"secondAdvice.html")
 
 def check_advice(request):
     if request.method == "POST":
@@ -86,7 +86,7 @@ def check_advice(request):
         }
         # txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
         context = {"result": "Model : {pred}, Doctor : {diag}, Second advice : {advice}".format(pred = predictions["model"], diag = predictions["doctor"], advice= predictions["Get second advice"])}
-        return render(request,"home.html",context = context)
+        return render(request,"secondAdvice.html",context = context)
     
 # from rest_framework import status
 # from rest_framework.decorators import api_view
