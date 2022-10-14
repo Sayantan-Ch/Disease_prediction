@@ -10,7 +10,7 @@
 
 <body style="text-align: center;">
 	
-	<div <section>
+	<div>
 
 		<div class="grid ">
 			<div class="bg-purple-900 h-72 flex items-center justify-center">
@@ -79,7 +79,11 @@
 			{% endif %}
 	
 		</h2>
-		<p id="par"></p>
+		<p id="par">
+			{% if result %}
+				<a href="/api/doctorPage/{{disease}}/"><button>Contact Recommended Doctors</button></a>
+			{% endif %}
+		</p>
 
 	</div>
 		<script type="text/javascript">

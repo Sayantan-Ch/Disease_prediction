@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+</head>
+<body>
+    Doctors Page
+
+    {% for doctor in doctors %}
+        <div style="background-color: aqua;">
+            <ul>
+                <li><h3>{{doctor.name}}</h3></li>
+                <li>{{doctor.speciality}}</li>
+                <li>{{doctor.practice_name}}</li>
+                <li>{{doctor.address}}</li>
+                <li>{{doctor.pincode}}</li>
+            </ul>
+        </div>
+        <br>
+    {% endfor %}
+</body>
+</html>

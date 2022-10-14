@@ -6,10 +6,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 import pickle
 import numpy as np
+from .utils import doctor_db
+from .models import Doctor
 
 # Create your views here.
 with open('saved_dictionary.pkl', 'rb') as f:
         data_dict1 = pickle.load(f)
+
+
 
 
 class Disease_Predict(APIView):
@@ -85,8 +89,16 @@ def check_advice(request):
             "Get second advice": isTrue,
         }
         # txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
-        context = {"result": "Model : {pred}, Doctor : {diag}, Second advice : {advice}".format(pred = predictions["model"], diag = predictions["doctor"], advice= predictions["Get second advice"])}
+        context = {"result": "Model : {pred}, Doctor : {diag}, Second advice : {advice}".format(pred = predictions["model"], diag = predictions["doctor"], advice= "GET ADVICE" if predictions["Get second advice"] else "NOT Required")}
+        context['disease'] = predictions["model"]
         return render(request,"secondAdvice.html",context = context)
+
+def recommendDoctor(request, disease):
+    print(disease)
+    context = {
+        'doctors': Doctor.objects.filter(speciality=doctor_db[disease])
+    }
+    return render(request, 'doctor.html', context=context)
     
 # from rest_framework import status
 # from rest_framework.decorators import api_view
