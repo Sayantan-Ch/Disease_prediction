@@ -10,3 +10,5 @@ from rest_framework.response import Response
 def home_page(request):
     return render(request,"home.html")
 
+def leasing_page(request):
+    return render(request,"leasing.html")

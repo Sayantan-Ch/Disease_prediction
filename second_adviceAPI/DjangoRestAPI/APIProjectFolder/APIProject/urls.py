@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('Prediction.urls')),
     path('home/', views.home_page),
+    path('leasing/', views.leasing_page),
 ]
