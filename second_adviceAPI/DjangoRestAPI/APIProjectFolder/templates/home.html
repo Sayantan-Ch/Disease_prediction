@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		How to get values from html input
+		array using JavaScript ?
+	</title>
+</head>
+
+<body style="text-align: center;">
+	
+	<h1 style="color: green;">
+		Second Advice
+	</h1>
+
+	<h2>
+		{% if result %}
+		{{result}}
+		{% endif %}
+
+	</h2>
+
+	<h3 id="po">Enter your symptons</h3>
+	<form class="" action="/api/abc/" method="post">
+        {%csrf_token%}
+		<input type="text" name="array[]" value="" /><br>
+		<input type="text" name="array[]" value="" /><br>
+		<input type="text" name="array[]" value="" /><br>
+		<h3 id="po">Enter your symptons</h3>
+        <input type="text" name="doctorAdvice" value=""/><br>
+		<button type="submit" name="button">
+			Get Advice
+		</button>
+	</form>
+	<br>
+    
+	<p id="par"></p>
+
+	<script type="text/javascript">
+		var k = "Entered symptons are ";
+		function Geeks() {
+			var input = document.getElementsByName('array[]');
+            const symptons = [];
+			for (var i = 0; i < input.length; i++) {
+				var a = input[i];
+                symptons[i]=a.value;
+			}
+            console.log(symptons);
+            console.log(document.getElementsByName('doctorAdvice')[0].value);
+		}
+	</script>
+</body>
+
+</html>
