@@ -4,22 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=""https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel=""stylesheet">
     <title>Doctors</title>
 </head>
 <body>
-    Doctors Page
+    <section>
+        <header>
+            <div class="flex justify-center  bg-no-repeat  bg-cover h-full md:bg-center"
+    style="background-image:url('https://scontent.fblr20-2.fna.fbcdn.net/v/t1.15752-9/306906365_784310422801042_4128406534039147312_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=9gmT9eWeMNgAX_YIBRB&_nc_ht=scontent.fblr20-2.fna&oh=03_AdRD1UzQzIR2LiisH2hMpOWj3hpogXNSQSPtP-252TQC8A&oe=636ED887')">
+    <div class="flex flex-col items-center ">
+        <nav class="self-center w-full max-w-7xl ">
+            <div
+                class="flex md:flex-row flex-col justify-between items-center md:items-start border-b-2 border-blue-900">
+                <ul class="flex  items-center text-sm md:text-[18px] font-bold  md:px-10 my-2">
+                        <div class="text-3xl text-green-600 font-bold mt-4 ">Doctor's Page</div>
+                    </div>
 
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/290d4f0eb4.js" crossorigin="anonymous"></script>
+        </header>
+<body>
     {% for doctor in doctors %}
-        <div style="background-color: aqua;">
-            <ul>
-                <li><h3>{{doctor.name}}</h3></li>
-                <li>{{doctor.speciality}}</li>
-                <li>{{doctor.practice_name}}</li>
-                <li>{{doctor.address}}</li>
-                <li>{{doctor.pincode}}</li>
-            </ul>
-        </div>
-        <br>
+        <div class="flex justify-center ">
+            <div class="flex flex-col justify-center items-center bg-slate-100 max-w-6x2">
+                <div class="text-2xl text-purple font-bold mt-2 ">Recommended Specialist Doctors</div>
+                <div class="flex flex-col items-center justify-evenly my-2 lg:px-10 lg:flex-row space-y-8 lg:space-y-0 ">
+                    
+                    <div
+                        class="flex flex-col justify-center items-center p-10 bg-white shadow w-[70%] md:w-[15%] lg:w-[70%] overflow-hidden">
+                        <div class="  "></div>
+                        <div class="flex flex-col -mt-50 -mr-[352px] hidden xl:block">
+                        </div>
+                        <h1 class="text-lg font-semibold text-purple-900 uppercase mt-1 ">Doctor: {{doctor.name}}.</p>
+                        <img src="https://media.istockphoto.com/photos/3d-render-cartoon-character-caucasian-woman-doctor-wears-glasses-and-picture-id1368432708?b=1&k=20&m=1368432708&s=170667a&w=0&h=C8kOpGsZV7wTQOUj7n1689czv_hn0BLW_mNBV7VvzKE=" class="rounded-full mt-4" alt="">
+                        <div class="flex flex-col -ml-[352px] mt-20 absolute hidden xl:block">
+                            <div class="w-2 h-14 bg-blue-900"></div>
+                            <div class="w-2 h-14 bg-green-500"></div>
+                        </div>
+                        <h1 class="text-lg font-semibold text-green-600 uppercase mt-1">Speciality: {{doctor.speciality}}</h1>
+                        <h1 class="text-lg font-semibold text-green-600 uppercase mt-1">Practice: {{doctor.practice_name}}</h1>
+                        <h1 class="text-lg font-semibold text-green-600 uppercase mt-1">Address: {{doctor.address}}</h1>
+                        <h1 class="text-lg font-semibold text-green-600 uppercase mt-1">Pincode: {{doctor.pincode}}</h1>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+    </section>
     {% endfor %}
+
 </body>
 </html>
