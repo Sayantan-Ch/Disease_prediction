@@ -56,12 +56,7 @@
 
 				</div>
 			</div>
-			<div>
-				<button type="submit" name="button"
-					class="bg-purple-900 p-2 m-4 text-white w-max font-normal hover:bg-purple-700 cursor-pointer">
-					Contact Doctors
-				</button>
-			</div>
+			
 		</div>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
@@ -81,7 +76,10 @@
 		</h2>
 		<p id="par">
 			{% if result %}
-				<a href="/api/doctorPage/{{disease}}/"><button>Contact Recommended Doctors</button></a>
+				<a href="/api/doctorPage/{{disease}}/"><button type="submit" name="button"
+					class="bg-purple-900 p-2 m-4 text-white w-max font-normal hover:bg-purple-700 cursor-pointer">
+					Contact Recommended Doctors
+				</button></a>
 			{% endif %}
 		</p>
 
