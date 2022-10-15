@@ -6,4 +6,5 @@ urlpatterns = [
     path('secondAdvice/', views.secondAdvice_page),
     path('abc/', views.check_advice),
     path('doctorPage/<str:disease>/', views.recommendDoctor),
+    path('fetchNearestDoctors/', views.fetchDocMinDistance),
 ]

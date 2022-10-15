@@ -55,6 +55,16 @@
 
 
 				</div>
+				<div>
+					<form action="/api/fetchNearestDoctors/" method="POST">
+						{% csrf_token %}
+						<input placeholder="Enter Your Pincode" required name="pincode">
+						<button type="submit" name="button"
+							class="bg-purple-900 p-2 m-4 text-white w-max font-normal hover:bg-purple-700 cursor-pointer">
+							Contact Nearest Doctors
+						</button>
+					</form>
+				</div>
 			</div>
 			
 		</div>

@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 import pickle
 import numpy as np
-from .utils import doctor_db
+from .utils import doctor_db, min_distance
 from .models import Doctor
 
 # Create your views here.
@@ -99,6 +99,22 @@ def recommendDoctor(request, disease):
         'doctors': Doctor.objects.filter(speciality=doctor_db[disease])
     }
     return render(request, 'doctor.html', context=context)
+
+def fetchDocMinDistance(request):
+    if request.method == 'POST':
+        pincode = int(request.POST['pincode'])
+        pincodes = list(Doctor.objects.all().values_list('pincode', flat=True))
+        near = min_distance(pincode, pincodes)
+        near = near[:3]
+        print(near)
+        nearest_doctors = []
+        for doctor in Doctor.objects.all():
+            if doctor.pincode in near:
+                nearest_doctors.append(doctor)
+        context = {
+            'doctors': nearest_doctors,
+        }
+        return render(request, 'doctor.html', context=context)
     
 # from rest_framework import status
 # from rest_framework.decorators import api_view

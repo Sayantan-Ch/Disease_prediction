@@ -60,7 +60,30 @@ doctor_db["Impetigo"] = "Dermatologist"
 
 
 
+def min_distance(distance,distances):
+    dict1 = {}
+    temp_arr = []
+    for i,j in enumerate(distances):
+        dict1[i] = abs(j - distance)
 
+    sorted_values = sorted(dict1.values()) # Sort the values
+    sorted_dict = {}
+
+    for i in sorted_values:
+        for k in dict1.keys():
+            if dict1[k] == i:
+                sorted_dict[k] = dict1[k]
+    for k in (sorted_dict.keys()):
+        temp_arr.append(distances[k])
+    return temp_arr
+
+
+# distance1 = 5 
+# distances1 = [7,9,2,5,1]
+# ans = min_distance(distance1,distances1)
+# # to get first 3 closest location 
+# ans = ans[:3]
+# print(*ans)
 
 
 
